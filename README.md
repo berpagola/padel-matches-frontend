@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Padel Matches Viewer
 
-## Getting Started
+## Description
 
-First, run the development server:
+Padel Matches Viewer is a web application that displays information about padel matches. It provides a user-friendly interface to view match details, including teams, scores, and tournament information. The application is built using Next.js and React, with a mobile-first responsive design.
 
-```bash
+## Features
+
+- Display a list of padel matches
+- Show match details including date, court, start time, and round
+- Display team information and scores
+- Mobile-friendly responsive design
+- Sample data included for demonstration purposes
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- Node.js (v14.0.0 or later)
+- npm (v6.0.0 or later)
+
+## Installation
+
+To install the Padel Matches Viewer, follow these steps:
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/padel-matches-viewer.git
+   ```
+
+2. Navigate to the project directory:
+   ```
+   cd padel-matches-viewer
+   ```
+
+3. Install the dependencies:
+   ```
+   npm install
+   ```
+
+## Usage
+
+To run the Padel Matches Viewer locally, use the following command:
+
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then, open your web browser and navigate to `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project uses:
 
-## Learn More
+- Next.js for the React framework
+- TypeScript for type-safe code
+- Tailwind CSS for styling
+- Lucide React for icons
 
-To learn more about Next.js, take a look at the following resources:
+The main component is located in `app/page.tsx`. This is where the match data is rendered and displayed.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To connect to a real API instead of using sample data:
 
-## Deploy on Vercel
+1. Replace the `sampleData` in `app/page.tsx` with a fetch call to your API endpoint.
+2. Update the `Match` interface if your API returns data in a different format.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions to the Padel Matches Viewer are welcome. Please adhere to the following steps:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/your-feature-name`.
+3. Make your changes and commit them: `git commit -m 'Add some feature'`.
+4. Push to the branch: `git push origin feature/your-feature-name`.
+5. Submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+
+## Contact
+
+If you have any questions or feedback, please contact the project maintainers at:
+
+- Email: your.email@example.com
+- GitHub: [@yourusername](https://github.com/yourusername)
+
+Thank you for using or contributing to the Padel Matches Viewer!
