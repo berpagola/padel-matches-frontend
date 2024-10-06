@@ -86,21 +86,22 @@ export default function Component() {
 
   useEffect(() => {
     const fetchMatches = async () => {
-      console.log('Iniciando fetchMatches') // Nuevo log
+      console.log('Iniciando fetchMatches')
       try {
         setLoading(true)
         setError(null)
-        console.log('Haciendo fetch a http://127.0.0.1:8000/partidos/') // Nuevo log
         const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
+        console.log('API_URL:', API_URL); // Añadido este log para depuración
+        console.log(`Haciendo fetch a ${API_URL}/partidos/`)
         const response = await fetch(`${API_URL}/partidos/`)
-        console.log('Respuesta recibida:', response.status, response.statusText) // Nuevo log
+        console.log('Respuesta recibida:', response.status, response.statusText)
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
         }
         
         const data = await response.json()
-        console.log('Datos recibidos:', data) // Log existente
+        console.log('Datos recibidos:', data)
         setMatches(data)
       } catch (e: unknown) {
         console.error('Error detallado:', e)
@@ -111,7 +112,7 @@ export default function Component() {
         }
       } finally {
         setLoading(false)
-        console.log('fetchMatches completado') // Nuevo log
+        console.log('fetchMatches completado')
       }
     }
 
